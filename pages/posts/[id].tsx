@@ -3,6 +3,7 @@ import Layout from '../../components/layout'
 import Date from '../../components/date'
 import { getAllPostIds, getPostData } from '../../lib/posts'
 import utilStyles from '../../styles/utils.module.css'
+import { GetStaticProps, GetStaticPaths } from 'next'
 
 
 // 1, ページをrenderingするcomponent
@@ -24,7 +25,8 @@ export default function Post({ postData }) {
 }
 
 // 2, getStaticPaths
-export async function getStaticPaths() {
+export const getStaticPaths: GetStaticPaths = async() => {
+// export async function getStaticPaths() {
   const paths = getAllPostIds()
   return {
     paths,          // 事前にビルドするパス対象を指定するための配列
@@ -33,8 +35,9 @@ export async function getStaticPaths() {
 }
 
 // 3, getStaticProps
-export async function getStaticProps({ params }) {
-  const postData = await getPostData(params.id)
+export const getStaticProps: GetStaticProps = async ({params}) => {
+// export async function getStaticProps({ params }) {
+  const postData = await getPostData(params.id as string)
   return {
     props: {
       postData
