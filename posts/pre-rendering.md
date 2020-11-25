@@ -1,7 +1,9 @@
 ---
-title: 'Two Forms of Pre-rendering'
+title: '変更内容の確認！！！！'
 date: '2020-01-01'
 ---
+
+## マージ前のプルリクエストページから、変更内容が反映されたプレビュー画面を表示できるってさ
 
 Next.js has two forms of pre-rendering: **Static Generation** and **Server-side Rendering**. The difference is in **when** it generates the HTML for a page.
 
