@@ -1,1 +1,2 @@
-This is a starter template for [Learn Next.js](https://nextjs.org/learn).
+Next.jsのチュートリアルをやってみる
+https://nextjs-blog-eta-vert.vercel.app/
